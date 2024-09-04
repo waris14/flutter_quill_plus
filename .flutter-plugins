@@ -1,9 +1,4 @@
 # This is a generated file; do not edit or check into version control.
-device_info_plus=/Applications/Development/flutter/.pub-cache/hosted/pub.dartlang.org/device_info_plus-4.1.3/
-device_info_plus_linux=/Applications/Development/flutter/.pub-cache/hosted/pub.dartlang.org/device_info_plus_linux-3.0.0/
-device_info_plus_macos=/Applications/Development/flutter/.pub-cache/hosted/pub.dartlang.org/device_info_plus_macos-3.0.0/
-device_info_plus_web=/Applications/Development/flutter/.pub-cache/hosted/pub.dartlang.org/device_info_plus_web-3.0.0/
-device_info_plus_windows=/Applications/Development/flutter/.pub-cache/hosted/pub.dartlang.org/device_info_plus_windows-4.1.0/
 flutter_keyboard_visibility=/Applications/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_keyboard_visibility-5.4.1/
 flutter_keyboard_visibility_linux=/Applications/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_keyboard_visibility_linux-1.0.0/
 flutter_keyboard_visibility_macos=/Applications/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_keyboard_visibility_macos-1.0.0/
