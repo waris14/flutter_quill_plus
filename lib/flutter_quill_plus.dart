@@ -1,4 +1,4 @@
-library flutter_quill;
+library flutter_quill_plus;
 
 export 'src/models/documents/attribute.dart';
 export 'src/models/documents/document.dart';

@@ -374,13 +374,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_quill",
+      "name": "flutter_quill_plus",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2024-09-04T07:30:25.548682Z",
+  "generated": "2024-09-04T09:01:49.159090Z",
   "generator": "pub",
   "generatorVersion": "2.17.3"
 }

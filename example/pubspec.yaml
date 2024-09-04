@@ -31,13 +31,13 @@ dependencies:
   path_provider: ^2.0.9
   filesystem_picker: ^2.0.0
   file_picker: ^4.6.1
-  flutter_quill:
+  flutter_quill_plus:
     path: ../
   flutter_quill_extensions:
     path: ../flutter_quill_extensions
 
 dependency_overrides:
-  flutter_quill:
+  flutter_quill_plus:
     path: ../
 
 dev_dependencies:

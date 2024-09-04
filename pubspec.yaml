@@ -1,9 +1,9 @@
-name: flutter_quill
+name: flutter_quill_plus
 description: A rich text editor supporting mobile and web (Demo App @ bulletjournal.us)
-version: 6.0.9
+version: 1.0.0
 #author: bulletjournal
-homepage: https://bulletjournal.us/home/index.html
-repository: https://github.com/singerdmx/flutter-quill
+homepage: https://github.com/waris14/flutter_quill_plus
+repository: https://github.com/waris14/flutter_quill_plus
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
