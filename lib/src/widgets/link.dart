@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../models/documents/attribute.dart';
 import '../models/documents/nodes/node.dart';
@@ -48,7 +49,7 @@ Future<LinkMenuAction> defaultLinkActionPickerDelegate(
     BuildContext context, String link, Node node) async {
   switch (defaultTargetPlatform) {
     case TargetPlatform.iOS:
-      return _showCupertinoLinkMenu(context, link);
+      return _showMaterialMenu(context, link);
     case TargetPlatform.android:
       return _showMaterialMenu(context, link);
     default:
@@ -166,10 +167,12 @@ Future<LinkMenuAction> _showMaterialMenu(
         mainAxisSize: MainAxisSize.min,
         children: [
           _MaterialAction(
-            title: 'Open'.i18n,
-            icon: Icons.language_sharp,
-            onPressed: () => Navigator.of(context).pop(LinkMenuAction.launch),
-          ),
+              title: 'Open'.i18n,
+              icon: Icons.language_sharp,
+              onPressed: () {
+                Navigator.of(context).pop();
+                _launchURL(url: link, context: context);
+              }),
           _MaterialAction(
             title: 'Copy'.i18n,
             icon: Icons.copy_sharp,
@@ -212,5 +215,25 @@ class _MaterialAction extends StatelessWidget {
       title: Text(title),
       onTap: onPressed,
     );
+  }
+}
+
+dynamic _launchURL({
+  required String url,
+  required BuildContext context,
+}) async {
+  try {
+    var webUri = Uri.parse(url);
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+      webUri = Uri.parse('http://$url');
+    }
+    if (!await launchUrl(
+      webUri,
+      mode: LaunchMode.externalApplication,
+    )) {
+      //couldn't launch link
+    }
+  } catch (e) {
+    //couldn't launch link
   }
 }

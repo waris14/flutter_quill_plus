@@ -138,7 +138,14 @@ class _LinkStyleButtonState extends State<LinkStyleButton> {
         length = range.end - range.start;
       }
     }
-    widget.controller.replaceText(index, length, text, null);
+    // widget.controller.replaceText(index, length, text, null);
+    // Remove the existing link text
+    widget.controller
+        .replaceText(index, length, '', TextSelection.collapsed(offset: index));
+
+    // Insert the new text with the link
+    widget.controller
+        .replaceText(index, 0, text, TextSelection.collapsed(offset: index));
     widget.controller.formatText(index, text.length, LinkAttribute(link));
   }
 }
